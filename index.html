@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra se puder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="imagex/png" href="imgs/Artemundo.ico">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Titulo que contem o conteudo do jogo-->
+        <h1>Descubra a Palavra</h1>
+        <!-- Imagem no topo do jogo -->
+        <img id="imagem-topo1" src="imgs/anankcas.png" alt="Imagem do Topo1"
+            style="width: 100%; max-width: 100px; height: auto; border-radius: 10px" />
+        <img id="imagem-topo2" src="imgs/sacknana.png" alt="Imagem do topo2"
+            style="width: 100%; max-width: 100px; height: auto; border-radius: 10px" />
+        <!-- seção onde a palavra secreta misteria sera mostrada-->
+        <div id="palavra">
+            <h2>Palavra: </h2>
+            <!-- aqui sera a atualizada a palavra secreta com as letras e espaços -->
+            <div id="palavra-secreta">
+
+            </div>
+            <div id="numeros-letras">
+                <h3 id="numeros-letras"> Número de Letras: 0</h3>
+            </div>
+            <div id="tentativas">
+                <h3>Tentativas restantes: <span id="tentativas-contagem"> 5 </span></h3>
+            </div>
+            <!-- caixa de entrada onde o usuario pode digitar uma letra -->
+            <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra " />
+            <!-- Botao que chama a função verifica letra quando pressionado -->
+            <button onclick="verificaLetra()">Chutar</button>
+
+            <!-- aqui sera mostrada a mensagem do jogo informando o resultado do chute-->
+            <p id="mensagem"></p>
+
+            <!--Botao que reinicia o jogo-->
+            <Button onclick="reiniciarJogo()"> Reiniciar o Jogo </Button>
+            <div id="resultado-imagem">
+                <!-- imagens que indicam se o chute foi correto ou nao-->
+                <img id="imagem-acerto" src="imgs/acerto.gif" alt="Acerto"
+                    style="display: none; width: 150px; height: 150px;" />
+                <img id="imagem-acerto2" src="imgs/acerto2.gif" alt="acerto2"
+                    style="display: none; width: 150px; height: 150px;" />
+                <img id="imagem-erro" src="imgs/erro.jpeg" alt="Erro"
+                    style="display: none; width: 150px; height: 150px;" />
+                <img id="imagem-erro2" src="imgs/erro2.gif" alt="Erro2"
+                    style="display: none; width: 150px; height: 150px;" />
+            </div>
+        </div>
+            <!-- Aqui fazemos a chamado do JS-->
+
+    <script src="script.js"></script>
+
+
+
+
+    </div>
+</body>
+
+</html>

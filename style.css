@@ -1,0 +1,102 @@
+/* Estilo Geral do corpo da pagina */
+body{
+    background-image: url(./imgs/bg2.jpg);
+    background-color: rgb(45, 192, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*tipo de fonte*/
+    display: flex; /* ultilizando o modelo flexblox para organizar o conteudo */
+    align-items: center; /*centraliza verticalmente o conteudo*/
+    height: 100vh; /* altura ocupa 100% da altura da janela do navegador*/
+    margin: 0%;/* remove a margem padrao do navegador*/
+    padding-bottom: 5%;
+    padding-top: 10px;
+    
+}
+.container{   
+    text-align: center;/*centraliza tudo dentro da caixa */
+    width: 70%; /*a largura maxima é de 80% dentro da tela*/
+    max-width: 500px;/*a largura maxima da caixa sera 500px*/
+    margin: auto;/*centraliza a caixa horizontalmente*/
+    /*background-color: aqua;*/
+    background: linear-gradient(rgba(0,255,255,0.95), rgba(2, 22, 245, 0.95));
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+/*Organizando imagens*/
+#imagem-topo1,#imagem-topo2,#imagem-a, #palavra-secreta{
+    display: inline-block;/*Coloca a imagem e as palavra uma do lado da outra*/
+    vertical-align: middle;/*alinha verticalmente no centro*/
+    margin: 20px;/*adiciona uma pequena margem entre os itens*/
+}
+/*#imagem-topo1,#imagem-topo2{
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}*/
+#palavra-secreta{
+    font-size: 2em;/*define o tamango da fonte da palavra secreta em uma unidade de medida que significa o dobro da fonte*/
+}
+/*estilo da area para o numero de letras*/
+#numero-letras{
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+/*estilo para a area de mensagens acerto/erro*/
+#mensagem{
+    font-size: 1.3em;
+    margin: 20px;
+}
+input{
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: hidden;
+    text-align: center;
+}
+input:focus{
+    border-style: hidden;
+}
+button{
+    background-color: transparent;
+    font-size: 1.2em;
+    border-style: hidden;
+    border-radius: 10px;
+    padding:10px;    
+    cursor: pointer;
+
+}
+#tentativas-contagem{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+button:hover{
+    /*background: linear-gradient(rgba(138, 43, 226, 0.95), rgba(88, 6, 164, 0.95));*/
+    background-color: blueviolet;
+    transition: background-color 0.5s;
+}
+button:focus{
+    background: linear-gradient(rgba(138, 43, 226, 0.95), rgba(88, 6, 164, 0.95));
+}
+#imagem-acerto,#imagem-erro,#imagem-acerto2,#imagem-erro2{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;/*ajusta a imagem para cobrir a area sem distorçao*/
+    margin: 20px auto;/*centraliza as imagens*/
+    display: none;/*inicialmente as imagens não sao exibidas*/
+    border-radius: 50%;/*torna as imagens redondas*/
+}
+#imagem-topo1:hover,#imagem-topo2:hover{
+    /*background: linear-gradient(rgba(138, 43, 226, 0.95), rgba(88, 6, 164, 0.95));*/
+    background-color: blueviolet;
+    transition: background-color 0.5s;
+}
+.buttons button{
+    cursor:pointer;
+    transition: background-color 0.3s;   
+}
+input,button{
+    display: inline-block;
+    margin-top: 10px;
+}
