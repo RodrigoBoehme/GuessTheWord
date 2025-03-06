@@ -137,6 +137,31 @@ function reiniciarJogo() {
 
 }
 
+function verificaPalavra(){
+        const guess=document.getElementById('guess').value.toLowerCase()
+    if(palavraSecreta.toLowerCase()===guess){
+        for(let i=0;i<palavraSecreta.length;i++){
+            letrasCorretas[i]=palavraSecreta[i]
+        }
+        }else{
+        tentativas--
+    }
+
+    atualizarErros()
+    atualizarPalavra()
+
+    if (letrasCorretas.join('') === palavraSecreta.replace(/ /g, '-')) {
+        document.getElementById('mensagem').textContent = `Você ganhou! A palavra era: ${palavraSecreta}`; // Exibe a mensagem de vitória
+        document.getElementById('mensagem').style.color = 'green'; // A mensagem fica verde
+    } else if (tentativas <= 0) {
+        document.getElementById('mensagem').textContent = `Você perdeu! A palavra era: ${palavraSecreta}`; // Exibe a mensagem de derrota
+        document.getElementById('mensagem').style.color = 'red'; // A mensagem fica vermelha
+    }
+    document.getElementById('guess').value=''
+}
+
 // Inicia o jogo chamando a função escolherPalavra
 escolherPalavra();
+
+
 

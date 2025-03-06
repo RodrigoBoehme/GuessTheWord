@@ -12,12 +12,16 @@
 </head>
 
 <body>
+
     <div class="container">
+
+
         <!-- Titulo que contem o conteudo do jogo-->
         <h1>Descubra a Palavra</h1>
         <!-- Imagem no topo do jogo -->
         <img id="imagem-topo1" src="imgs/anankcas.png" alt="Imagem do Topo1"
             style="width: 100%; max-width: 100px; height: auto; border-radius: 10px" />
+
         <img id="imagem-topo2" src="imgs/sacknana.png" alt="Imagem do topo2"
             style="width: 100%; max-width: 100px; height: auto; border-radius: 10px" />
         <!-- seção onde a palavra secreta misteria sera mostrada-->
@@ -38,6 +42,11 @@
             <!-- Botao que chama a função verifica letra quando pressionado -->
             <button onclick="verificaLetra()">Chutar</button>
 
+
+            <input type="text" id="guess" maxlength="24" placeholder="Digite a palavra " />
+            <!-- Botao que chama a função verifica letra quando pressionado -->
+            <button onclick="verificaPalavra()">Chutar</button>
+
             <!-- aqui sera mostrada a mensagem do jogo informando o resultado do chute-->
             <p id="mensagem"></p>
 
@@ -55,13 +64,13 @@
                     style="display: none; width: 150px; height: 150px;" />
             </div>
         </div>
-            <!-- Aqui fazemos a chamado do JS-->
+        <!-- Aqui fazemos a chamado do JS-->
 
-    <script src="script.js"></script>
-
-
+        <script src="script.js"></script>
 
 
+
+            
     </div>
 </body>
 
